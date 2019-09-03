@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>task1/read/text.txt - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../lib/godoc/style.css">
+
+
+<script>window.initFuncs = [];</script>
+
+<script src="../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.12.4";</script>
+<script src="../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../../index.html">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../../index.html">Go</a></div>
+<a href="text.txt.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+<a href="../../doc.html">Documents</a>
+<a href="../../pkg.html">Packages</a>
+<a href="http://localhost:6060/project/">The Project</a>
+<a href="http://localhost:6060/help/">Help</a>
+
+<a href="../../blog/index.html">Blog</a>
+
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Text file
+    <a href="../../task1.html">task1</a>/<a href="../read.html">read</a>/<span class="text-muted">text.txt</span>
+  </h1>
+
+
+
+
+
+  <h2>
+    Documentation: <a href="http://localhost:6060/pkg/task1/read">task1/read</a>
+  </h2>
+
+
+
+<div id="nav"></div>
+
+
+<pre><span id="L1" class="ln">     1</span>&lt;!DOCTYPE html&gt;
+<span id="L2" class="ln">     2</span>&lt;html&gt;
+<span id="L3" class="ln">     3</span>&lt;head&gt;
+<span id="L4" class="ln">     4</span>&lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=utf-8&#34;&gt;
+<span id="L5" class="ln">     5</span>&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34;&gt;
+<span id="L6" class="ln">     6</span>&lt;meta name=&#34;theme-color&#34; content=&#34;#375EAB&#34;&gt;
+<span id="L7" class="ln">     7</span>
+<span id="L8" class="ln">     8</span>  &lt;title&gt;task1/read/text.txt - The Go Programming Language&lt;/title&gt;
+<span id="L9" class="ln">     9</span>
+<span id="L10" class="ln">    10</span>&lt;link type=&#34;text/css&#34; rel=&#34;stylesheet&#34; href=&#34;/lib/godoc/style.css&#34;&gt;
+<span id="L11" class="ln">    11</span>
+<span id="L12" class="ln">    12</span>
+<span id="L13" class="ln">    13</span>&lt;script&gt;window.initFuncs = [];&lt;/script&gt;
+<span id="L14" class="ln">    14</span>
+<span id="L15" class="ln">    15</span>&lt;script src=&#34;/lib/godoc/jquery.js&#34; defer&gt;&lt;/script&gt;
+<span id="L16" class="ln">    16</span>
+<span id="L17" class="ln">    17</span>
+<span id="L18" class="ln">    18</span>
+<span id="L19" class="ln">    19</span>&lt;script&gt;var goVersion = &#34;go1.12.4&#34;;&lt;/script&gt;
+<span id="L20" class="ln">    20</span>&lt;script src=&#34;/lib/godoc/godocs.js&#34; defer&gt;&lt;/script&gt;
+<span id="L21" class="ln">    21</span>&lt;/head&gt;
+<span id="L22" class="ln">    22</span>&lt;body&gt;
+<span id="L23" class="ln">    23</span>
+<span id="L24" class="ln">    24</span>&lt;div id=&#39;lowframe&#39; style=&#34;position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;&#34;&gt;
+<span id="L25" class="ln">    25</span>...
+<span id="L26" class="ln">    26</span>&lt;/div&gt;&lt;!-- #lowframe --&gt;
+<span id="L27" class="ln">    27</span>
+<span id="L28" class="ln">    28</span>&lt;div id=&#34;topbar&#34; class=&#34;wide&#34;&gt;&lt;div class=&#34;container&#34;&gt;
+<span id="L29" class="ln">    29</span>&lt;div class=&#34;top-heading&#34; id=&#34;heading-wide&#34;&gt;&lt;a href=&#34;/&#34;&gt;The Go Programming Language&lt;/a&gt;&lt;/div&gt;
+<span id="L30" class="ln">    30</span>&lt;div class=&#34;top-heading&#34; id=&#34;heading-narrow&#34;&gt;&lt;a href=&#34;/&#34;&gt;Go&lt;/a&gt;&lt;/div&gt;
+<span id="L31" class="ln">    31</span>&lt;a href=&#34;#&#34; id=&#34;menu-button&#34;&gt;&lt;span id=&#34;menu-button-arrow&#34;&gt;&amp;#9661;&lt;/span&gt;&lt;/a&gt;
+<span id="L32" class="ln">    32</span>&lt;form method=&#34;GET&#34; action=&#34;/search&#34;&gt;
+<span id="L33" class="ln">    33</span>&lt;div id=&#34;menu&#34;&gt;
+<span id="L34" class="ln">    34</span>&lt;a href=&#34;/doc/&#34;&gt;Documents&lt;/a&gt;
+<span id="L35" class="ln">    35</span>&lt;a href=&#34;/pkg/&#34;&gt;Packages&lt;/a&gt;
+<span id="L36" class="ln">    36</span>&lt;a href=&#34;/project/&#34;&gt;The Project&lt;/a&gt;
+<span id="L37" class="ln">    37</span>&lt;a href=&#34;/help/&#34;&gt;Help&lt;/a&gt;
+<span id="L38" class="ln">    38</span>
+<span id="L39" class="ln">    39</span>&lt;a href=&#34;/blog/&#34;&gt;Blog&lt;/a&gt;
+<span id="L40" class="ln">    40</span>
+<span id="L41" class="ln">    41</span>
+<span id="L42" class="ln">    42</span>&lt;span class=&#34;search-box&#34;&gt;&lt;input type=&#34;search&#34; id=&#34;search&#34; name=&#34;q&#34; placeholder=&#34;Search&#34; aria-label=&#34;Search&#34; required&gt;&lt;button type=&#34;submit&#34;&gt;&lt;span&gt;&lt;!-- magnifying glass: --&gt;&lt;svg width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;title&gt;submit search&lt;/title&gt;&lt;path d=&#34;M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z&#34;/&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;
+<span id="L43" class="ln">    43</span>&lt;/div&gt;
+<span id="L44" class="ln">    44</span>&lt;/form&gt;
+<span id="L45" class="ln">    45</span>
+<span id="L46" class="ln">    46</span>&lt;/div&gt;&lt;/div&gt;
+<span id="L47" class="ln">    47</span>
+<span id="L48" class="ln">    48</span>
+<span id="L49" class="ln">    49</span>
+<span id="L50" class="ln">    50</span>&lt;div id=&#34;page&#34; class=&#34;wide&#34;&gt;
+<span id="L51" class="ln">    51</span>&lt;div class=&#34;container&#34;&gt;
+<span id="L52" class="ln">    52</span>
+<span id="L53" class="ln">    53</span>
+<span id="L54" class="ln">    54</span>  &lt;h1&gt;
+<span id="L55" class="ln">    55</span>    Text file
+<span id="L56" class="ln">    56</span>    &lt;a href=&#34;/task1&#34;&gt;task1&lt;/a&gt;/&lt;a href=&#34;/task1/read&#34;&gt;read&lt;/a&gt;/&lt;span class=&#34;text-muted&#34;&gt;text.txt&lt;/span&gt;
+<span id="L57" class="ln">    57</span>  &lt;/h1&gt;
+<span id="L58" class="ln">    58</span>
+<span id="L59" class="ln">    59</span>
+<span id="L60" class="ln">    60</span>
+<span id="L61" class="ln">    61</span>
+<span id="L62" class="ln">    62</span>
+<span id="L63" class="ln">    63</span>  &lt;h2&gt;
+<span id="L64" class="ln">    64</span>    Documentation: &lt;a href=&#34;/pkg/task1/read&#34;&gt;task1/read&lt;/a&gt;
+<span id="L65" class="ln">    65</span>  &lt;/h2&gt;
+<span id="L66" class="ln">    66</span>
+<span id="L67" class="ln">    67</span>
+<span id="L68" class="ln">    68</span>
+<span id="L69" class="ln">    69</span>&lt;div id=&#34;nav&#34;&gt;&lt;/div&gt;
+<span id="L70" class="ln">    70</span>
+<span id="L71" class="ln">    71</span>
+<span id="L72" class="ln">    72</span>&lt;pre&gt;&lt;span id=&#34;L1&#34; class=&#34;ln&#34;&gt;     1&lt;/span&gt;Brandon Varela
+<span id="L73" class="ln">    73</span>&lt;span id=&#34;L2&#34; class=&#34;ln&#34;&gt;     2&lt;/span&gt;Antonio Vargas
+<span id="L74" class="ln">    74</span>&lt;span id=&#34;L3&#34; class=&#34;ln&#34;&gt;     3&lt;/span&gt;Carlos Retana
+<span id="L75" class="ln">    75</span>&lt;span id=&#34;L4&#34; class=&#34;ln&#34;&gt;     4&lt;/span&gt;Pedro Lin
+<span id="L76" class="ln">    76</span>&lt;span id=&#34;L5&#34; class=&#34;ln&#34;&gt;     5&lt;/span&gt;Maria Campos
+<span id="L77" class="ln">    77</span>&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;/task1/read/text.txt?m=text&#34;&gt;View as plain text&lt;/a&gt;&lt;/p&gt;
+<span id="L78" class="ln">    78</span>
+<span id="L79" class="ln">    79</span>&lt;div id=&#34;footer&#34;&gt;
+<span id="L80" class="ln">    80</span>Build version go1.12.4.&lt;br&gt;
+<span id="L81" class="ln">    81</span>Except as &lt;a href=&#34;https://developers.google.com/site-policies#restrictions&#34;&gt;noted&lt;/a&gt;,
+<span id="L82" class="ln">    82</span>the content of this page is licensed under the
+<span id="L83" class="ln">    83</span>Creative Commons Attribution 3.0 License,
+<span id="L84" class="ln">    84</span>and code is licensed under a &lt;a href=&#34;/LICENSE&#34;&gt;BSD license&lt;/a&gt;.&lt;br&gt;
+<span id="L85" class="ln">    85</span>&lt;a href=&#34;/doc/tos.html&#34;&gt;Terms of Service&lt;/a&gt; |
+<span id="L86" class="ln">    86</span>&lt;a href=&#34;http://www.google.com/intl/en/policies/privacy/&#34;&gt;Privacy Policy&lt;/a&gt;
+<span id="L87" class="ln">    87</span>&lt;/div&gt;
+<span id="L88" class="ln">    88</span>
+<span id="L89" class="ln">    89</span>&lt;/div&gt;&lt;!-- .container --&gt;
+<span id="L90" class="ln">    90</span>&lt;/div&gt;&lt;!-- #page --&gt;
+<span id="L91" class="ln">    91</span>
+<span id="L92" class="ln">    92</span>&lt;/body&gt;
+<span id="L93" class="ln">    93</span>&lt;/html&gt;
+<span id="L94" class="ln">    94</span>
+</pre><p><a href="text.txt%3Fm=text">View as plain text</a></p>
+
+<div id="footer">
+Build version go1.12.4.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="http://localhost:6060/doc/tos.html">Terms of Service</a> |
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+</body>
+</html>
+
