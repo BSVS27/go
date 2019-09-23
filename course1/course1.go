@@ -7,44 +7,44 @@ import (
 	"os"
 )
 
-type Person struct { <span class="comment">//STRUCT</span>
+type Person struct { //STRUCT
 	name string
 	addr string
 	phone int
 }
 
 func main() {
-	fmt.Println(&#34;Hello World&#34;)
+	fmt.Println("Hello World")
 	var var1 int32
 	var1 = 2
 	var2 := 3
 	fmt.Println(var1, var2)
-	var3 := &#34;casa&#34;
-	var4 := (var3 + &#34;hola&#34;)
+	var3 := "casa"
+	var4 := (var3 + "hola")
 	fmt.Println(var4)
 
 	var x int = 1
 	var y int
 	var ip *int
 
-	ip = &amp;x
+	ip = &x
 	y = *ip
 
 	fmt.Println(y)
 
-	ptr := new(int) <span class="comment">//Create a pointer</span>
+	ptr := new(int) //Create a pointer
 	*ptr = 3
 	fmt.Println(ptr)
 
 	var x1 int32 = 5
-	x2 := int64(x1) <span class="comment">//convert variables</span>
+	x2 := int64(x1) //convert variables
 	fmt.Println(x2)
-	fmt.Println(string(var3[0]))
+	fmt.Println("VAR3",string(var3[0]), var3[0])
 
 	const xx = 1.3
 	const (
 		yy = 4
-		z = &#34;H&#34;
+		z = "H"
 	
 	)
 
@@ -57,33 +57,33 @@ func main() {
 	)
 
 	if Monday == 0 {
-		fmt.Println(&#34;Monday es 0&#34;)
+		fmt.Println("Monday es 0")
 	} else {
-	 fmt.Println(&#34;Monday is not 0&#34;)
+	 fmt.Println("Monday is not 0")
 	}
 	
-	for i:=0;i&lt;5;i++{
+	for i:=0;i<5;i++{
 		fmt.Println(i)
 		if i == 3{
-			fmt.Println(&#34;Saliendo del for&#34;)
+			fmt.Println("Saliendo del for")
 			break
 		}
 	}
 
 	switch xx {
 	case 1.3:
-		fmt.Println(&#34;Es 1.3&#34;)
+		fmt.Println("Es 1.3")
 	default:
-		fmt.Println(&#34;No es 1.3&#34;)
+		fmt.Println("No es 1.3")
 	}
 	
-	fmt.Println(&#34;Number of apples?&#34;)
+	fmt.Println("Number of apples?")
 
 	var appleNum int
 
-	fmt.Scan(&amp;appleNum) <span class="comment">// To read de input</span>
+	fmt.Scan(&appleNum) // To read de input
 
-	fmt.Println(&#34;The number of apples are: &#34;, appleNum)
+	fmt.Println("The number of apples are: ", appleNum)
 
 	var array [3]int = [3]int{1,2,3}
 
@@ -92,15 +92,15 @@ func main() {
 	fmt.Println(array[0],array1[0],len(array))
 
 	for i, v := range array{
-		fmt.Println(&#34;Index: &#34;, i,&#34;value: &#34;, v)
+		fmt.Println("Index: ", i,"value: ", v)
 	}
 
-	arr := [...]string{&#34;a&#34;,&#34;b&#34;,&#34;c&#34;,&#34;d&#34;}
+	arr := [...]string{"a","b","c","d"}
 
-	<span class="comment">//s1 := arr[1:2]</span>
+	//s1 := arr[1:2]
 	s2 := arr[2:]
 
-	fmt.Println(<span class="comment">/*s1,*/</span>&#34;   &#34;, s2, &#34;   &#34;, len(s2), cap(s2))
+	fmt.Println(/*s1,*/"   ", s2, "   ", len(s2), cap(s2))
 
 	sli := []int{1,2,3}
 
@@ -113,43 +113,43 @@ func main() {
 	fmt.Println(sli1)
 
 	mapp := map[string]int{
-		&#34;joe&#34;:123, 
-		&#34;jane&#34;: 331}
-	mapp[&#34;joe&#34;] = 100
-	delete(mapp,&#34;jane&#34;) <span class="comment">//to delete a key</span>
-	_ , p := mapp[&#34;jane&#34;] <span class="comment">//p is true if jane is a key inside mapp</span>
-	fmt.Println(mapp[&#34;joe&#34;],mapp,p)
+		"joe":123, 
+		"jane": 331}
+	mapp["joe"] = 100
+	delete(mapp,"jane") //to delete a key
+	_ , p := mapp["jane"] //p is true if jane is a key inside mapp
+	fmt.Println(mapp["joe"],mapp,p)
 
 	for key, val := range mapp {
 		fmt.Println(key, val)
 	}
 
 	var p1 Person
-	p1.name = &#34;joe&#34;
-	p1.addr = &#34;a st&#34;
+	p1.name = "joe"
+	p1.addr = "a st"
 	p1.phone = 123
 
 	fmt.Println(p1)
 
-	barr, err := json.Marshal(p1) <span class="comment">//STRUCT TO JSON</span>
+	barr, err := json.Marshal(p1) //STRUCT TO JSON
 
 	var p2 Person
-	err1 := json.Unmarshal(barr, &amp;p2)
+	err1 := json.Unmarshal(barr, &p2)
 
 	fmt.Println(barr,err,p2,err1)
 
-	dat, _ := ioutil.ReadFile(&#34;test.txt&#34;)
+	dat, _ := ioutil.ReadFile("test.txt")
 
 	fmt.Println(string(dat),len(dat))
 
-	<span class="comment">//err2 := ioutil.WriteFile(&#34;test.txt&#34;,byte(&#34;Bye World&#34;),0777)</span>
+	//err2 := ioutil.WriteFile("test.txt",byte("Bye World"),0777)
 	
-	f, _ := os.Open(&#34;test.txt&#34;)
+	f, _ := os.Open("test.txt")
 	barr1 := make([]byte,78)
 	nb, _ := f.Read(barr1)
-	<span class="comment">//os.Write()</span>
+	//os.Write()
 	fmt.Println(string(nb))
-	f.WriteString(&#34;Hi&#34;)
+	f.WriteString("Hi")
 	f.Close()
 
 
@@ -161,11 +161,11 @@ func main() {
 	yyy = append(yyy,4)
 	fmt.Println(yyy)
 
-	<span class="comment">//var rt = [3]int{1,2,3}</span>
-	<span class="comment">//rt1, rt2 := rt</span>
+	//var rt = [3]int{1,2,3}
+	//rt1, rt2 := rt
 
-	var rtrt = &#34;a&#34;
-	<span class="comment">//dada := fmt.Sprintf(&#34;%s%s&#34;, rtrt, &#34;a&#34;)</span>
-	dada := rtrt + &#34;a&#34;
+	var rtrt = "a"
+	//dada := fmt.Sprintf("%s%s", rtrt, "a")
+	dada := rtrt + "a"
 	fmt.Println(dada)
 }

@@ -1,3 +1,5 @@
+package main
+
 import (
 	"fmt"
 	"encoding/json"
@@ -12,7 +14,7 @@ func main() {
 	fmt.Print("Type the name: ")
 	fmt.Scan(&name)
 	fmt.Print("Type the address: ")
-	fmt.Scan(&amp;address)
+	fmt.Scan(&address)
 
 	mapp["name"] = name
 	mapp["address"] = address

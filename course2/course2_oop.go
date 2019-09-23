@@ -1,9 +1,9 @@
 package main
 
 import (
-	"fmt";
-	"math";
-	"data";
+	"fmt"
+	"math"
+	"data"
 )
 
 type MyInt int
@@ -22,7 +22,7 @@ func (p Point) DisToOrig() float64 {
 	return math.Sqrt(t)
 }
 
-type Shape2D interface{ <span class="comment">//polymorphism or  to create a function that can resive diffentes types of inputs</span>
+type Shape2D interface{ //polymorphism or  to create a function that can resive diffentes types of inputs
 	Area() float64
 	Perim() float64
 }
@@ -62,31 +62,31 @@ func measure(s Shape2D){
 }
 
 func FitInYard(s Shape2D) bool {
-	if s.Area() &gt; 100 &amp;&amp; s.Perim() &gt; 100 {
+	if s.Area() < 100 {
 		return true
 	}
 	return false
 }
 
-func PrintMe(val interface{}){ <span class="comment">//It is a function that can resive any type of input</span>
+func PrintMe(val interface{}){ //It is a function that can resive any type of input
 	fmt.Println(val)
 }
 
 func DrawShape(s Shape2D) {
 	tri, ok := s.(Triangle)
 	if ok{
-		fmt.Println(&#34;It is a Triangle &#34;,tri)
+		fmt.Println("It is a Triangle" ,tri)
 	}
 	cir, ok := s.(Circle)
 	if ok {
-		fmt.Println(&#34;It is a Circle &#34;, cir)
+		fmt.Println("It is a Circle" , cir)
 	}
 
 	switch s.(type){
 	case Triangle:
-		fmt.Println(&#34;Triangle&#34;)
+		fmt.Println("Triangle")
 	case Circle:
-		fmt.Println(&#34;Circle&#34;)
+		fmt.Println("Circle")
 	}
 }
 
@@ -97,33 +97,33 @@ func main() {
 	v := MyInt(3)
 	fmt.Println(v.Double())
 	fmt.Println(v)
->	
->	var p Point
->	p.x = 3
->	p.y = 4
->	fmt.Println(p.DisToOrig())
->	data.PrintX()
->
->	var ca data.Casa
->	ca.InitMe(5,5)
->	ca.X = 0
->	fmt.Println(ca.PrintCasa())
->	
->	t := Triangle{2,5}
->	c := Circle{100}
->
->	fmt.Println(t.Area())
->	fmt.Println(c.Area())
->
->	measure(t)
->	measure(c)
->
->	var s1 Shape2D
->	d1 := Circle{2}
->	s1 = d1 <span class="comment">//because s1 has a method of d1</span>
->	fmt.Println(s1.Area())
->
->	fmt.Println(FitInYard(c))
->	DrawShape(c)
->	PrintMe(123)
->}
+	
+	var p Point
+	p.x = 3
+	p.y = 4
+	fmt.Println(p.DisToOrig())
+	data.PrintX()
+
+	var ca data.Casa
+	ca.InitMe(5,5)
+	ca.X = 0
+	fmt.Println(ca.PrintCasa())
+	
+	t := Triangle{2,5}
+	c := Circle{100}
+
+	fmt.Println(t.Area())
+	fmt.Println(c.Area())
+
+	measure(t)
+	measure(c)
+
+	var s1 Shape2D
+	d1 := Circle{2}
+	s1 = d1 //because s1 has a method of d1
+	fmt.Println(s1.Area())
+
+	fmt.Println(FitInYard(c))
+	DrawShape(c)
+	PrintMe(123)
+}

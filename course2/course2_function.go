@@ -1,11 +1,11 @@
 package main
 
 import (
-	&#34;fmt&#34;
+	"fmt"
 )
 
 func PrintHello() {
-	fmt.Println(&#34;Hello&#34;)
+	fmt.Println("Hello")
 }
 
 func foo(x int, y int) (int,int) {
@@ -40,8 +40,8 @@ func applyIt(afunct func (int) int, val int) int {
 func getMax(vals ...int) int {
 	maxV := -1
 	for _, v := range vals{
-		if v &gt; maxV{
-			maxV =v
+		if v > maxV{
+			maxV = v
 		}
 	}
 	return maxV
@@ -52,14 +52,14 @@ func main() {
 	x,y := foo(2,3)
 	fmt.Println(x,y)
 
-	pointer(&amp;x)
+	pointer(&x)
 	fmt.Println(x)
 
 	a := [3]int{1,2,3}
 	fmt.Println(array(a))
 	
 	a1 := [3]int{1,2,3}
-	pointerarray(&amp;a1)
+	pointerarray(&a1)
 
 	fmt.Println(a1)
 	
@@ -68,15 +68,16 @@ func main() {
 	fmt.Println(b)
 	
 
-	var funcVar func(int) int <span class="comment">//variable for a function</span>
+	var funcVar func(int) int //variable for a function
 	funcVar = incFn
 	fmt.Println(funcVar(1))
 	fmt.Println(applyIt(incFn,2))
 
 	slice := []int{1,3,6,4}
-	fmt.Println(getMax(vslice...))
+	fmt.Println(getMax(slice...))
 	i := 1
 	fmt.Print(i)
 	i++
 	defer fmt.Print(i+1)
 	fmt.Print(i)
+}
